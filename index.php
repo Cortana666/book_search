@@ -30,7 +30,7 @@
 </head>
 <body>
     <div>
-        <form action="search.php" method="get">
+        <form action="index.php" method="get">
             <input type="text" name="keyword" id="keyword" value="<?php echo $key_word; ?>">
             <input type="submit" value="搜索">
         </form>
