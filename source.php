@@ -5,7 +5,7 @@
             'name' => 'xqqxs8',
             'encoding' => 'UTF-8',
             'search_url' => 'https://m2.xqqxs8.com/search.php?keyword={{$keyword}}',
-            'search_html' => '/<a href="(\/\d+\/\d+\/)"><p class="title">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/p><p class="author">作者：<a href="\/author\/\d+\/">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a>/u',
+            'search_html' => '/<a href="(\/\d+\/\d+\/)"><p class="title">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/p> +<p class="author"> +作者：<a href="\/author\/\d+\/">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a>/u',
             'catalog_url' => 'https://m2.xqqxs8.com{{$url}}all.html',
             'catalog_html' => '/<p><a href="(\/\d+\/\d+\/\d+\.html)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a><\/p>/u',
             'catalog_prev' => '',
