@@ -31,8 +31,10 @@
 <body>
     <div>
         <form action="index.php" method="get">
-            <input type="text" name="keyword" id="keyword" value="<?php echo $key_word; ?>">
+            <input type="text" name="keyword" value="<?php echo $key_word; ?>">
+            <br>
             <input type="submit" value="搜索">
+            <a href="go.php">已有目录网址？</a>
         </form>
     </div>
     <?php if ($key_word) { ?>
