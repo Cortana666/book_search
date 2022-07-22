@@ -31,7 +31,7 @@
         </div>
         <?php if ($catalog['catalog_page']) { ?>
         <div>
-            <select id="page_select" onchange="page_change(this)">
+            <select onchange="page_change(this)">
                 <option value="">请选择</option>
                 <?php foreach ($catalog['catalog_page'] as $key => $value) { ?>
                 <option value="catalog.php?url=<?php echo $value['url']; ?>&source_key=<?php echo $source_key; ?>"><?php echo $value['page']; ?></option>
