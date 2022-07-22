@@ -1,21 +1,37 @@
 <?php
     // 书源
     $source = array(
-        'xqqxs8' => array(
-            'name' => 'xqqxs8',
-            'encoding' => 'UTF-8',
-            'search_url' => 'https://m2.xqqxs8.com/search.php?keyword={{$keyword}}',
-            'search_html' => '/<a href="(\/\d+\/\d+\/)"><p class="title">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/p> +<p class="author"> +作者：<a href="\/author\/\d+\/">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a>/u',
-            'catalog_url' => 'https://m2.xqqxs8.com{{$url}}all.html',
-            'catalog_html' => '/<p><a href="(\/\d+\/\d+\/\d+\.html)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a><\/p>/u',
-            'catalog_page' => '',
-            'catalog_page_url' => '',
-            'catalog_page_html' => '',
-            'article_url' => 'https://m2.xqqxs8.com{{$url}}',
-            'article_html' => '/<div id="chaptercontent" class="Readarea ReadAjax_content">(.*)<\/div>/',
-            'article_prev' => '/<a href="((\/\d+\/\d+\/)|\/\d+\/\d+\/[0-9_]+\.html)" id="pt_prev" class="Readpage_up">/',
-            'article_next' => '/<a href="((\/\d+\/\d+\/)|\/\d+\/\d+\/[0-9_]+\.html)" id="pt_next" class="Readpage_down js_page_down">/',
-            'article_catalog' => '/<a href="(\/\d+\/\d+\/)" id="pt_mulu" class="Readpage_up">/',
+        // 'xqqxs8' => array(
+        //     'name' => 'xqqxs8',
+        //     'encoding' => 'UTF-8',
+        //     'search_url' => 'https://m2.xqqxs8.com/search.php?keyword={{$keyword}}',
+        //     'search_html' => '/<a href="(\/\d+\/\d+\/)"><p class="title">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/p> +<p class="author"> +作者：<a href="\/author\/\d+\/">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a>/u',
+        //     'catalog_url' => 'https://m2.xqqxs8.com{{$url}}all.html',
+        //     'catalog_html' => '/<p><a href="(\/\d+\/\d+\/\d+\.html)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a><\/p>/u',
+        //     'catalog_page' => '',
+        //     'catalog_page_url' => '',
+        //     'catalog_page_html' => '',
+        //     'article_url' => 'https://m2.xqqxs8.com{{$url}}',
+        //     'article_html' => '/<div id="chaptercontent" class="Readarea ReadAjax_content">(.*)<\/div>/',
+        //     'article_prev' => '/<a href="((\/\d+\/\d+\/)|\/\d+\/\d+\/[0-9_]+\.html)" id="pt_prev" class="Readpage_up">/',
+        //     'article_next' => '/<a href="((\/\d+\/\d+\/)|\/\d+\/\d+\/[0-9_]+\.html)" id="pt_next" class="Readpage_down js_page_down">/',
+        //     'article_catalog' => '/<a href="(\/\d+\/\d+\/)" id="pt_mulu" class="Readpage_up">/',
+        // ),
+        'yetianlian' => array(
+            'name' => 'yetianlian',
+            'encoding' => 'GBK',
+            'search_url' => 'http://m.yetianlian.com/s.php?q={{$keyword}}&submit=',
+            // 'search_html' => '/<a href="(\/\d+\/\d+\/)"><p class="title">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/p><p class="author">作者：<a href="\/author\/\d+\/">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a>/u',
+            // 'catalog_url' => 'https://m.xbiqugela.com{{$url}}all.html',
+            // 'catalog_html' => '/<li><ahref="(\/book_\d+\/\d+\.html)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a><\/li>/u',
+            // 'catalog_page' => 'select',
+            // 'catalog_page_url' => 'https://m.xbiqugela.com{{$url}}',
+            // 'catalog_page_html' => '/<optionvalue="(\/book_\d+\/all\.html\?sort=1&page=\d+)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/option>/u',
+            // 'article_url' => 'https://m.xbiqugela.com{{$url}}',
+            // 'article_html' => '/<divid="nr1">(.*)<\/div><pclass="showbq">/',
+            // 'article_prev' => '/<ahref="(\/book_\d+\/\d+\.html|\/book_\d+\/\d+\/\d+\.html)"id="pb_prev"class="Readpage_up">/',
+            // 'article_next' => '/<ahref="(\/book_\d+\/\d+\.html|\/book_\d+\/\d+\/\d+\.html)"id="pb_next"class="Readpage_downjs_page_down">/',
+            // 'article_catalog' => '/<ahref="(\/book_\d+\/)"id="pb_mulu"class="Readpage_up">/',
         ),
         // 'fyrsks' => array(
         //     'name' => 'fyrsks',
@@ -57,16 +73,14 @@
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         $html = curl_exec($curl);
-        if ($source['encoding'] != 'UTF-8') {
-            $encode = mb_detect_encoding($html, array("ASCII",'UTF-8',"GB2312","GBK",'BIG5'));
+        $encode = mb_detect_encoding($html, array("ASCII", "UTF-8", "GB2312", "GBK", "BIG5"));
+        if ($encode != 'UTF-8') {
             $html = mb_convert_encoding($html, 'UTF-8', $encode);
         }
         $html = str_replace("\n", "", $html);
         $html = str_replace("\r\n", "", $html);
         $html = str_replace("\r", "", $html);
-        // $html = str_replace(" ", "", $html);
-        // $html = str_replace("	", "", $html);
-        // var_dump($html);die;
+        var_dump($html);die;
         return $html;
     }
 
