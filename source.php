@@ -5,44 +5,44 @@
             'name' => 'xqqxs8',
             'encoding' => 'UTF-8',
             'search_url' => 'https://m2.xqqxs8.com/search.php?keyword={{$keyword}}',
-            'search_html' => '/<ahref="(\/\d+\/\d+\/)"><pclass="title">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9、，,。.（(）)！!？?：:]+)<\/p><pclass="author">作者：<ahref="\/author\/\d+\/">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9、，,。.（(）)！!？?：:]+)<\/a>/u',
+            'search_html' => '/<ahref="(\/\d+\/\d+\/)"><pclass="title">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/p><pclass="author">作者：<ahref="\/author\/\d+\/">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a>/u',
             'catalog_url' => 'https://m2.xqqxs8.com{{$url}}all.html',
-            'catalog_html' => '/<p><ahref="(\/\d+\/\d+\/\d+\.html)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9、，,。.（(）)！!？?：:]+)<\/a><\/p>/u',
+            'catalog_html' => '/<p><a href="(\/\d+\/\d+\/\d+\.html)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a><\/p>/u',
             'catalog_page' => '',
             'catalog_page_url' => '',
             'catalog_page_html' => '',
             'article_url' => 'https://m2.xqqxs8.com{{$url}}',
             'article_html' => '/<div id="chaptercontent" class="Readarea ReadAjax_content">(.*)<\/div>/',
-            'article_prev' => '/<ahref="(\/\d+\/\d+\/[0-9_]+.html)"id="pt_prev"class="Readpage_up">/',
-            'article_next' => '/<ahref="(\/\d+\/\d+\/[0-9_]+.html)"id="pt_next"class="Readpage_downjs_page_down">/',
-            'article_catalog' => '/<ahref="(\/\d+\/\d+\/)"id="pt_mulu"class="Readpage_up">/',
+            'article_prev' => '/<a href="((\/\d+\/\d+\/)|\/\d+\/\d+\/[0-9_]+\.html)" id="pt_prev" class="Readpage_up">/',
+            'article_next' => '/<a href="((\/\d+\/\d+\/)|\/\d+\/\d+\/[0-9_]+\.html)" id="pt_next" class="Readpage_down js_page_down">/',
+            'article_catalog' => '/<a href="(\/\d+\/\d+\/)" id="pt_mulu" class="Readpage_up">/',
         ),
         'fyrsks' => array(
             'name' => 'fyrsks',
             'encoding' => 'UTF-8',
             'search_url' => 'http://www.fyrsks.com/ar.php?keyWord={{$keyword}}',
-            'search_html' => '/<ahref="(\/bqg\/\d+\/)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9、，,。.（(）)！!？?：:]+)<\/a><\/span><spanclass="s3"><ahref="\/bqg\/\d+\/\d+\.html">[\x{4e00}-\x{9fa5}_\-a-zA-Z0-9、，,。.（(）)！!？?：:]+<\/a><\/span><spanclass="s4">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9、，,。.（(）)！!？?：:]+)<\/span>/u',
+            'search_html' => '/<ahref="(\/bqg\/\d+\/)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a><\/span><spanclass="s3"><ahref="\/bqg\/\d+\/\d+\.html">[\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+<\/a><\/span><spanclass="s4">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/span>/u',
             'catalog_url' => 'http://www.fyrsks.com{{$url}}',
-            'catalog_html' => '/<astyle=""href="(\/bqg\/\d+\/\d+\.html)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9、，,。.（(）)！!？?：:]+)<\/a>/u',
+            'catalog_html' => '/<astyle=""href="(\/bqg\/\d+\/\d+\.html)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a>/u',
             'catalog_page' => '',
             'catalog_page_url' => '',
             'catalog_page_html' => '',
             'article_url' => 'http://www.fyrsks.com{{$url}}',
             'article_html' => '/<divclass="content"id="content">(.*)<ahref="javascript:;"onclick="javascript:addBookMark\(\);"class="btn-addbs">/',
-            'article_prev' => '/<divclass="section-opt"><ahref="(\/bqg\/\d+\/[0-9_]+\.html|\d+\.html)">[\x{4e00}-\x{9fa5}_\-a-zA-Z0-9、，,。.（(）)！!？?：:]+<\/a><spanclass="xs-hidden">/u',
-           'article_next' => '/<spanclass="xs-hidden">→<\/span><ahref="(\/bqg\/\d+\/[0-9_]+\.html|\d+\.html)">[\x{4e00}-\x{9fa5}_\-a-zA-Z0-9、，,。.（(）)！!？?：:]+<\/a><ahref="\/txt\/\d+\/">TXT下载<\/a>/u',
+            'article_prev' => '/<divclass="section-opt"><ahref="(\/bqg\/\d+\/[0-9_]+\.html|\d+\.html)">[\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+<\/a><spanclass="xs-hidden">/u',
+           'article_next' => '/<spanclass="xs-hidden">→<\/span><ahref="(\/bqg\/\d+\/[0-9_]+\.html|\d+\.html)">[\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+<\/a><ahref="\/txt\/\d+\/">TXT下载<\/a>/u',
             'article_catalog' => '/<spanclass="xs-hidden">←<\/span><ahref="(\/bqg\/\d+\/)">章节列表<\/a><spanclass="xs-hidden">→<\/span>/',
         ),
         'xbiqugela' => array(
             'name' => 'xbiqugela',
             'encoding' => 'UTF-8',
             // 'search_url' => 'https://m2.xqqxs8.com/search.php?keyword={{$keyword}}',
-            // 'search_html' => '/<a href="(\/\d+\/\d+\/)"><p class="title">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9、，,。.（(）)！!？?：:]+)<\/p><p class="author">作者：<a href="\/author\/\d+\/">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9、，,。.（(）)！!？?：:]+)<\/a>/u',
+            // 'search_html' => '/<a href="(\/\d+\/\d+\/)"><p class="title">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/p><p class="author">作者：<a href="\/author\/\d+\/">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a>/u',
             'catalog_url' => 'https://m.xbiqugela.com{{$url}}all.html',
-            'catalog_html' => '/<li><ahref="(\/book_\d+\/\d+\.html)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9、，,。.（(）)！!？?：:]+)<\/a><\/li>/u',
+            'catalog_html' => '/<li><ahref="(\/book_\d+\/\d+\.html)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a><\/li>/u',
             'catalog_page' => 'select',
             'catalog_page_url' => 'https://m.xbiqugela.com{{$url}}',
-            'catalog_page_html' => '/<optionvalue="(\/book_\d+\/all\.html\?sort=1&page=\d+)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9、，,。.（(）)！!？?：:]+)<\/option>/u',
+            'catalog_page_html' => '/<optionvalue="(\/book_\d+\/all\.html\?sort=1&page=\d+)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/option>/u',
             'article_url' => 'https://m.xbiqugela.com{{$url}}',
             'article_html' => '/<divid="nr1">(.*)<\/div><pclass="showbq">/',
             'article_prev' => '/<ahref="(\/book_\d+\/\d+\.html|\/book_\d+\/\d+\/\d+\.html)"id="pb_prev"class="Readpage_up">/',
@@ -64,8 +64,8 @@
         $html = str_replace("\n", "", $html);
         $html = str_replace("\r\n", "", $html);
         $html = str_replace("\r", "", $html);
-        $html = str_replace(" ", "", $html);
-        $html = str_replace("	", "", $html);
+        // $html = str_replace(" ", "", $html);
+        // $html = str_replace("	", "", $html);
         // var_dump($html);die;
         return $html;
     }
