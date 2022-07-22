@@ -20,15 +20,25 @@
 </head>
 <body>
     <?php if ($url) { ?>
-        <?php if ($catalog) { ?>
+        <?php if ($catalog['catalog']) { ?>
     <div>
         <div>
             <ul>
-            <?php foreach ($catalog as $key => $value) { ?>
+            <?php foreach ($catalog['catalog'] as $key => $value) { ?>
                 <li><a href="article.php?url=<?php echo $value['url']; ?>&source_key=<?php echo $source_key; ?>"><?php echo $value['title']; ?></a></li>
             <?php } ?>
             </ul>
         </div>
+        <?php if ($catalog['catalog_page']) { ?>
+        <div>
+            <select id="page_select" onchange="page_change(this)">
+                <option value="">请选择</option>
+                <?php foreach ($catalog['catalog_page'] as $key => $value) { ?>
+                <option value="catalog.php?url=<?php echo $value['url']; ?>&source_key=<?php echo $source_key; ?>"><?php echo $value['page']; ?></option>
+                <?php } ?>
+            </select>
+        </div>
+        <?php } ?>
     </div>
         <?php } else { ?>
     <div>
@@ -41,4 +51,9 @@
     </div>
     <?php } ?>
 </body>
+<script>
+    function page_change(obj) {
+        location.href = obj.options[obj.selectedIndex].value;
+    }
+</script>
 </html>
