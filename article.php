@@ -38,6 +38,11 @@
     </div>
     <?php if ($url) { ?>
         <?php if ($article) { ?>
+    <div>
+        <a href="article.php?url=<?php echo $article['prev']; ?>&source_key=<?php echo $source_key; ?>">上一页</a>
+        <a href="catalog.php?url=<?php echo $article['catalog']; ?>&source_key=<?php echo $source_key; ?>">目录</a>
+        <a href="article.php?url=<?php echo $article['next']; ?>&source_key=<?php echo $source_key; ?>">下一页</a>
+    </div>
     <div <?php echo $_SESSION['read_type'] == 2 ? 'style="color: white;"' : 'style="color: black;"'; ?>>
         <?php echo $article['content']; ?>
     </div>
