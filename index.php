@@ -5,14 +5,13 @@
     if ($key_word) {
         $book = array();
         foreach ($source as $key => $value) {
-            if ($value['encoding'] != 'UTF-8') {
-                $encode = mb_detect_encoding($key_word, array("ASCII",'UTF-8',"GB2312","GBK",'BIG5'));
-                $key_word = mb_convert_encoding($key_word, $value['encoding'], $encode);
+            if ($value['search_encoding'] != 'UTF-8') {
+                $encode = mb_detect_encoding($key_word, array("ASCII", "GB2312", "GBK", 'BIG5'));
+                $key_word = mb_convert_encoding($key_word, $value['search_encoding'], $encode);
             }
             $url = str_replace('{{$keyword}}', urlencode($key_word), $value['search_url']);
             $html = getHtml($url, $value);
-            if ($value['encoding'] != 'UTF-8') {
-                $encode = mb_detect_encoding($key_word, array("ASCII",'UTF-8',"GB2312","GBK",'BIG5'));
+            if ($value['search_encoding'] != 'UTF-8') {
                 $key_word = mb_convert_encoding($key_word, 'UTF-8', $encode);
             }
             $book = getSearch($book, $html, $value);

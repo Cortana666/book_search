@@ -5,64 +5,65 @@
         //     'name' => 'xqqxs8',
         //     'encoding' => 'UTF-8',
         //     'search_url' => 'https://m2.xqqxs8.com/search.php?keyword={{$keyword}}',
-        //     'search_html' => '/<a href="(\/\d+\/\d+\/)"><p class="title">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/p> +<p class="author"> +作者：<a href="\/author\/\d+\/">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a>/u',
+        //     'search_html' => '/<a href="(\/\d+\/\d+\/)"><p class="title">([\x{4e00}-\x{9fa5}_\-\+a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/p> +<p class="author"> +作者：<a href="\/author\/\d+\/">([\x{4e00}-\x{9fa5}_\-\+a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a>/u',
         //     'catalog_url' => 'https://m2.xqqxs8.com{{$url}}all.html',
-        //     'catalog_html' => '/<p><a href="(\/\d+\/\d+\/\d+\.html)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a><\/p>/u',
+        //     'catalog_html' => '/<p><a href="(\/\d+\/\d+\/\d+.html)">([\x{4e00}-\x{9fa5}_\-\+a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a><\/p>/u',
         //     'catalog_page' => '',
         //     'catalog_page_url' => '',
         //     'catalog_page_html' => '',
         //     'article_url' => 'https://m2.xqqxs8.com{{$url}}',
         //     'article_html' => '/<div id="chaptercontent" class="Readarea ReadAjax_content">(.*)<\/div>/',
-        //     'article_prev' => '/<a href="((\/\d+\/\d+\/)|\/\d+\/\d+\/[0-9_]+\.html)" id="pt_prev" class="Readpage_up">/',
-        //     'article_next' => '/<a href="((\/\d+\/\d+\/)|\/\d+\/\d+\/[0-9_]+\.html)" id="pt_next" class="Readpage_down js_page_down">/',
+        //     'article_prev' => '/<a href="((\/\d+\/\d+\/)|\/\d+\/\d+\/[0-9_]+.html)" id="pt_prev" class="Readpage_up">/',
+        //     'article_next' => '/<a href="((\/\d+\/\d+\/)|\/\d+\/\d+\/[0-9_]+.html)" id="pt_next" class="Readpage_down js_page_down">/',
         //     'article_catalog' => '/<a href="(\/\d+\/\d+\/)" id="pt_mulu" class="Readpage_up">/',
         // ),
         'yetianlian' => array(
             'name' => 'yetianlian',
-            'encoding' => 'GBK',
+            'search_encoding' => 'GBK',
+            'html_encoding' => 'UTF-8',
             'search_url' => 'http://m.yetianlian.com/s.php?q={{$keyword}}&submit=',
-            // 'search_html' => '/<a href="(\/\d+\/\d+\/)"><p class="title">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/p><p class="author">作者：<a href="\/author\/\d+\/">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a>/u',
-            // 'catalog_url' => 'https://m.xbiqugela.com{{$url}}all.html',
-            // 'catalog_html' => '/<li><ahref="(\/book_\d+\/\d+\.html)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a><\/li>/u',
-            // 'catalog_page' => 'select',
-            // 'catalog_page_url' => 'https://m.xbiqugela.com{{$url}}',
-            // 'catalog_page_html' => '/<optionvalue="(\/book_\d+\/all\.html\?sort=1&page=\d+)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/option>/u',
-            // 'article_url' => 'https://m.xbiqugela.com{{$url}}',
-            // 'article_html' => '/<divid="nr1">(.*)<\/div><pclass="showbq">/',
-            // 'article_prev' => '/<ahref="(\/book_\d+\/\d+\.html|\/book_\d+\/\d+\/\d+\.html)"id="pb_prev"class="Readpage_up">/',
-            // 'article_next' => '/<ahref="(\/book_\d+\/\d+\.html|\/book_\d+\/\d+\/\d+\.html)"id="pb_next"class="Readpage_downjs_page_down">/',
-            // 'article_catalog' => '/<ahref="(\/book_\d+\/)"id="pb_mulu"class="Readpage_up">/',
+            'search_html' => '/<a href="(\/yt\d+\/)"><h2>([\x{4e00}-\x{9fa5}_\-\+a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/h2><\/a><\/p><p>[\x{4e00}-\x{9fa5}_\-\+a-zA-Z0-9 、，,。.（(）)！!？?：:]+<\/p><p>([\x{4e00}-\x{9fa5}_\-\+a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/p>/u',
+            'catalog_url' => 'http://m.yetianlian.com{{$url}}',
+            'catalog_html' => '/<li><a href="(\/yt\d+\/\d+.html)">([\x{4e00}-\x{9fa5}_\-\+a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a><\/li>/u',
+            'catalog_page' => 'select',
+            'catalog_page_url' => 'http://m.yetianlian.com{{$url}}',
+            'catalog_page_html' => '/<option value="(\/yt\d+\/|\/yt\d+\/index_\d+.html)" (selected="selected"|)>([\x{4e00}-\x{9fa5}_\-\+a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/option>/u',
+            'article_url' => 'http://m.yetianlian.com{{$url}}',
+            'article_html' => '/<div id="nr1">(.*)<\/div> +<\/div>/',
+            'article_prev' => '/<a id="pb_prev" href="(\/yt\d+\/\d+.html|\/yt\d+\/\d+_\d+.html)">/',
+            'article_next' => '/<a id="pb_next" href="(\/yt\d+\/\d+.html|\/yt\d+\/\d+_\d+.html)">/',
+            'article_catalog' => '/<a id="pb_mulu" href="(\/yt\d+\/)">/',
         ),
         // 'fyrsks' => array(
         //     'name' => 'fyrsks',
         //     'encoding' => 'UTF-8',
         //     'search_url' => 'http://www.fyrsks.com/ar.php?keyWord={{$keyword}}',
-        //     'search_html' => '/<ahref="(\/bqg\/\d+\/)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a><\/span><spanclass="s3"><ahref="\/bqg\/\d+\/\d+\.html">[\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+<\/a><\/span><spanclass="s4">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/span>/u',
+        //     'search_html' => '/<ahref="(\/bqg\/\d+\/)">([\x{4e00}-\x{9fa5}_\-\+a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a><\/span><spanclass="s3"><ahref="\/bqg\/\d+\/\d+.html">[\x{4e00}-\x{9fa5}_\-\+a-zA-Z0-9 、，,。.（(）)！!？?：:]+<\/a><\/span><spanclass="s4">([\x{4e00}-\x{9fa5}_\-\+a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/span>/u',
         //     'catalog_url' => 'http://www.fyrsks.com{{$url}}',
-        //     'catalog_html' => '/<astyle=""href="(\/bqg\/\d+\/\d+\.html)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a>/u',
+        //     'catalog_html' => '/<astyle=""href="(\/bqg\/\d+\/\d+.html)">([\x{4e00}-\x{9fa5}_\-\+a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a>/u',
         //     'catalog_page' => '',
         //     'catalog_page_url' => '',
         //     'catalog_page_html' => '',
         //     'article_url' => 'http://www.fyrsks.com{{$url}}',
         //     'article_html' => '/<divclass="content"id="content">(.*)<ahref="javascript:;"onclick="javascript:addBookMark\(\);"class="btn-addbs">/',
-        //     'article_prev' => '/<divclass="section-opt"><ahref="(\/bqg\/\d+\/[0-9_]+\.html|\d+\.html)">[\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+<\/a><spanclass="xs-hidden">/u',
-        //    'article_next' => '/<spanclass="xs-hidden">→<\/span><ahref="(\/bqg\/\d+\/[0-9_]+\.html|\d+\.html)">[\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+<\/a><ahref="\/txt\/\d+\/">TXT下载<\/a>/u',
+        //     'article_prev' => '/<divclass="section-opt"><ahref="(\/bqg\/\d+\/[0-9_]+.html|\d+.html)">[\x{4e00}-\x{9fa5}_\-\+a-zA-Z0-9 、，,。.（(）)！!？?：:]+<\/a><spanclass="xs-hidden">/u',
+        //    'article_next' => '/<spanclass="xs-hidden">→<\/span><ahref="(\/bqg\/\d+\/[0-9_]+.html|\d+.html)">[\x{4e00}-\x{9fa5}_\-\+a-zA-Z0-9 、，,。.（(）)！!？?：:]+<\/a><ahref="\/txt\/\d+\/">TXT下载<\/a>/u',
         //     'article_catalog' => '/<spanclass="xs-hidden">←<\/span><ahref="(\/bqg\/\d+\/)">章节列表<\/a><spanclass="xs-hidden">→<\/span>/',
         // ),
         // 'xbiqugela' => array(
         //     'name' => 'xbiqugela',
         //     'encoding' => 'UTF-8',
         //     // 'search_url' => 'https://m2.xqqxs8.com/search.php?keyword={{$keyword}}',
-        //     // 'search_html' => '/<a href="(\/\d+\/\d+\/)"><p class="title">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/p><p class="author">作者：<a href="\/author\/\d+\/">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a>/u',
+        //     // 'search_html' => '/<a href="(\/\d+\/\d+\/)"><p class="title">([\x{4e00}-\x{9fa5}_\-\+a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/p><p class="author">作者：<a href="\/author\/\d+\/">([\x{4e00}-\x{9fa5}_\-\+a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a>/u',
         //     'catalog_url' => 'https://m.xbiqugela.com{{$url}}all.html',
-        //     'catalog_html' => '/<li><ahref="(\/book_\d+\/\d+\.html)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a><\/li>/u',
+        //     'catalog_html' => '/<li><ahref="(\/book_\d+\/\d+.html)">([\x{4e00}-\x{9fa5}_\-\+a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/a><\/li>/u',
         //     'catalog_page' => 'select',
         //     'catalog_page_url' => 'https://m.xbiqugela.com{{$url}}',
-        //     'catalog_page_html' => '/<optionvalue="(\/book_\d+\/all\.html\?sort=1&page=\d+)">([\x{4e00}-\x{9fa5}_\-a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/option>/u',
+        //     'catalog_page_html' => '/<optionvalue="(\/book_\d+\/all.html\?sort=1&page=\d+)"()>([\x{4e00}-\x{9fa5}_\-\+a-zA-Z0-9 、，,。.（(）)！!？?：:]+)<\/option>/u',
         //     'article_url' => 'https://m.xbiqugela.com{{$url}}',
         //     'article_html' => '/<divid="nr1">(.*)<\/div><pclass="showbq">/',
-        //     'article_prev' => '/<ahref="(\/book_\d+\/\d+\.html|\/book_\d+\/\d+\/\d+\.html)"id="pb_prev"class="Readpage_up">/',
-        //     'article_next' => '/<ahref="(\/book_\d+\/\d+\.html|\/book_\d+\/\d+\/\d+\.html)"id="pb_next"class="Readpage_downjs_page_down">/',
+        //     'article_prev' => '/<ahref="(\/book_\d+\/\d+.html|\/book_\d+\/\d+\/\d+.html)"id="pb_prev"class="Readpage_up">/',
+        //     'article_next' => '/<ahref="(\/book_\d+\/\d+.html|\/book_\d+\/\d+\/\d+.html)"id="pb_next"class="Readpage_downjs_page_down">/',
         //     'article_catalog' => '/<ahref="(\/book_\d+\/)"id="pb_mulu"class="Readpage_up">/',
         // ),
     );
@@ -73,14 +74,16 @@
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         $html = curl_exec($curl);
-        $encode = mb_detect_encoding($html, array("ASCII", "UTF-8", "GB2312", "GBK", "BIG5"));
-        if ($encode != 'UTF-8') {
+        curl_close($curl);
+        // var_dump($html);die;
+        if ($source['html_encoding'] != 'UTF-8') {
+            $encode = mb_detect_encoding($html, array("ASCII", "GB2312", "GBK", "BIG5"));
             $html = mb_convert_encoding($html, 'UTF-8', $encode);
         }
         $html = str_replace("\n", "", $html);
         $html = str_replace("\r\n", "", $html);
         $html = str_replace("\r", "", $html);
-        var_dump($html);die;
+        // var_dump($html);die;
         return $html;
     }
 
@@ -118,7 +121,7 @@
                 foreach ($res[0] as $key => $value) {
                     $catalog_page[] = array(
                         'url' => base64_encode(str_replace('{{$url}}', $res[1][$key], $source['catalog_page_url'])),
-                        'page' => $res[2][$key],
+                        'page' => $res[3][$key],
                     );
                 }
             }
