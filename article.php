@@ -44,7 +44,8 @@
         <a href="article.php?url=<?php echo $article['next']; ?>&source_key=<?php echo $source_key; ?>">下一页</a>
     </div>
     <div <?php echo $_SESSION['read_type'] == 2 ? 'style="color: white;"' : 'style="color: black;"'; ?>>
-        <?php echo $article['content']; ?>
+        <h2><?php echo $article['title']; ?></h2>
+        <p><?php echo $article['content']; ?></p>
     </div>
     <div>
         <a href="article.php?url=<?php echo $article['prev']; ?>&source_key=<?php echo $source_key; ?>">上一页</a>

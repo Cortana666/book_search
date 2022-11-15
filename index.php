@@ -33,7 +33,8 @@
             <input type="text" name="keyword" value="<?php echo $key_word; ?>">
             <br>
             <input type="submit" value="搜索">
-            <a href="go.php">已有目录网址？</a>
+            <a href="gocatalog.php">已有目录网址？</a>
+            <a href="goarticle.php">已有章节网址？</a>
         </form>
     </div>
     <?php if ($key_word) { ?>

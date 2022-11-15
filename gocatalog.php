@@ -18,7 +18,7 @@
 </head>
 <body>
     <div>
-        <form action="go.php" method="get">
+        <form action="gocatalog.php" method="get">
             <select name="source_key">
             <option value="">请选择...</option>
                 <?php foreach ($source as $key => $value) { ?>
